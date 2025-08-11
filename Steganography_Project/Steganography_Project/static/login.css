@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url('/static/images/hi.jpg'); /* Direct path */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    background-size: cover; /* Makes sure the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center; /* Center the image */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1;
+}
+
+body > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.register-container {
+    width: 400px;
+    padding: 2rem;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.1);
+    border: 1px solid #007700;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00ff00;
+    text-shadow: 0 0 5px #005500;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: #00cc00;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #005500;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #0a0a0a;
+    color: #00ff00;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 3px #007700;
+}
+
+button {
+    width: 100%;
+    background-color: #0a0a0a;
+    color: #00ff00;
+    padding: 10px;
+    border: 1px solid #007700;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 0 0 3px #005500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #007700;
+    color: #0a0a0a;
+    text-shadow: none;
+}
+
+p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color: #00ff00;
+}
+
+p a {
+    color: #00cc00;
+    text-decoration: none;
+    text-shadow: 0 0 3px #005500;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #00ff00;
+}

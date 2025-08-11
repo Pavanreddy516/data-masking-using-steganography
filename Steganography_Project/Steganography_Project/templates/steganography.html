@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Steganography Tool</h1>
+
+        <!-- Embed Section -->
+        <div id="embed-section">
+            <h2>Embed Data in Image</h2>
+            <form id="embed-form">
+                <label for="image">Select Image:</label>
+                <input type="file" id="image" accept="image/*" required>
+
+                <label for="data">Data to Embed:</label>
+                <textarea id="data" required></textarea>
+
+                <label for="password">Caesar Cipher Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Embed Data</button>
+            </form>
+            <div id="embed-result"></div>
+        </div>
+
+        <!-- Extract Section -->
+        <div id="extract-section">
+            <h2>Extract Data from Image</h2>
+            <form id="extract-form">
+                <label for="extract-image">Select Image:</label>
+                <input type="file" id="extract-image" accept="image/*" required>
+
+                <label for="extract-password">Caesar Cipher Password:</label>
+                <input type="password" id="extract-password" required>
+
+                <button type="submit">Extract Data</button>
+            </form>
+            <div id="extracted-data"></div>
+        </div>
+    </div>
+
+    <!-- Ensure user is logged in -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                alert('You must be logged in to access this page.');
+                window.location.href = '/'; // Redirect to login page if no token
+            }
+        });
+    </script>
+
+    <!-- External JavaScript for form handling -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

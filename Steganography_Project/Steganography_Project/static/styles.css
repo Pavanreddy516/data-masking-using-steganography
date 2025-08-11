@@ -1,0 +1,162 @@
+/* Reset and apply font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/hi2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #0f0; /* Green hacker-style text */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Optional: Semi-transparent dark overlay to enhance contrast */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Layer above the overlay */
+    background: rgba(0, 0, 0, 0.9); /* Darker container */
+    box-shadow: 0 4px 30px rgba(0, 255, 0, 0.5); /* Green hacker-style glow */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+/* Keyframe animation for smooth appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form label styles */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: rgba(0, 255, 0, 0.8); /* Green hacker-style text */
+    text-align: left;
+}
+
+/* Input fields with focus effects */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #0f0; /* Green text */
+    background: rgba(0, 0, 0, 0.8);
+    outline: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Button with hover and active animations */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #003300, #00cc00);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.7);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Add a glowing border animation */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* Subtle effect for result area */
+#login-result {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #0f0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: none;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+/* Animation for login-result appearance */
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}

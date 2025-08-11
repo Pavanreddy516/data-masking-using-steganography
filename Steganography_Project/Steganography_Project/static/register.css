@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace; /* Monospaced font for hacker theme */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/static/images/hi.jpg') no-repeat center center fixed; /* Image background */
+    background-size: cover; /* Make sure the image covers the viewport */
+    color: #c9d1d9; /* Light text for contrast */
+    overflow: hidden;
+}
+
+
+.register-container {
+    width: 400px;
+    padding: 2rem;
+    background-color: #161b22; /* Dark container background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.1); /* Greenish glow */
+    border: 1px solid #2e3338; /* Subtle border */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00ff00; /* Neon green */
+    text-shadow: 0 0 10px #00ff00; /* Glowing effect */
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: #8b949e; /* Dimmed text color */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2e3338; /* Dark border */
+    border-radius: 5px;
+    background-color: #0d1117; /* Dark input background */
+    color: #c9d1d9; /* Light text */
+    font-size: 14px;
+    box-shadow: 0 0 5px #00ff00; /* Neon glow effect */
+}
+
+button {
+    width: 100%;
+    background-color: #00ff00; /* Neon green button */
+    color: #0d1117; /* Dark text */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ff00; /* Neon glow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #32cd32; /* Slightly lighter green on hover */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color: #8b949e; /* Dimmed text color */
+}
+
+p a {
+    color: #00ff00; /* Neon green link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #32cd32; /* Lighter green on hover */
+}
+
+/* Animation for digital effect */
+@keyframes glitch {
+    0% { transform: skew(0.5deg); }
+    50% { transform: skew(-0.5deg); }
+    100% { transform: skew(0.5deg); }
+}
+
+h1 {
+    animation: glitch 1s infinite linear alternate;
+}

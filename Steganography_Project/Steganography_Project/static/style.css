@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, #0d0d0d, #000000), 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 255, 0, 0.1) 10px, rgba(0, 255, 0, 0.1) 20px);
+    background-blend-mode: overlay;
+    background-size: 400px 400px;
+    color: #00ff00; /* Hacker green text */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(18, 18, 18, 0.95); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3); /* Enhanced neon glow effect */
+    border: 1px solid #00ff00; /* Green border */
+    animation: pulse 2s infinite alternate;
+}
+
+/* Pulse Animation for Glow Effect */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(0, 255, 0, 0.6), 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #00ff00; /* Green text */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px rgba(0, 255, 0, 0.8); /* Stronger glow effect */
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    letter-spacing: 1.5px;
+}
+
+/* Form Elements */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00ff00; /* Green labels */
+}
+
+input[type="file"],
+textarea,
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(13, 13, 13, 0.9); /* Transparent dark background */
+    color: #00ff00; /* Green text */
+    border: 1px solid #00ff00; /* Green border */
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Buttons */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00ff00, #00cc00);
+    color: #0d0d0d; /* Dark text for contrast */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #00cc00, #009900);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.6);
+}
+
+/* Results Display */
+#embed-result,
+#extracted-data {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(13, 13, 13, 0.9); /* Transparent dark background */
+    border: 1px solid #00ff00; /* Green border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #00ff00; /* Green text */
+    word-wrap: break-word;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+/* Section Styling */
+#embed-section,
+#extract-section {
+    margin-top: 40px;
+}
+
+/* Alerts (Optional) */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(51, 0, 0, 0.8); /* Transparent dark red background */
+    color: #ff3333; /* Bright red text for errors */
+    border: 1px solid #ff6666; /* Light red border */
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 10px; 
+    }
+}

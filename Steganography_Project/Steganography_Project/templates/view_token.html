@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Token</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Token</h1>
+        <textarea readonly rows="4" cols="50">{{ token }}</textarea>
+        <form id="verify-form">
+            <label for="token">Enter your token to verify:</label>
+            <input type="text" id="token" required>
+        </form>
+        <!-- view_token.html -->
+<form method="POST" action="{{ url_for('redirect_to_steganography') }}">
+    <input type="hidden" name="token" value="{{ token }}">
+    <button type="submit">Verify Token and Go to Steganography</button>
+</form>
+
+        <div id="verification-result"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
